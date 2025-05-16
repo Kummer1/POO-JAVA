@@ -1,14 +1,14 @@
-import modelos.Filme;
+import modelo.Filme;
 
 public class Principal {
     public static void main(String[] args) {
 
         Filme meuFilme = new Filme();
 
-        meuFilme.nome = "Interestelar";
+        meuFilme.setNome("Interestelar");
 
-        //meuFilme.anoDeLancamento = 2014;
-        //meuFilme.duracaoEmMinutos = 180;
+        meuFilme.setAnoDeLancamento(2015);
+        meuFilme.setDuracaoEmMinutos(150);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(7);
