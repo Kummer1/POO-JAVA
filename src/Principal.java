@@ -1,4 +1,6 @@
 import calculos.CalculadoraDeTempo;
+import calculos.FiltroRecomendacao;
+import modelo.Episodio;
 import modelo.Filme;
 import modelo.Serie;
 import calculos.CalculadoraDeTempo;
@@ -44,7 +46,17 @@ public class Principal {
         calculadora.inclui(blackMirror);
         calculadora.inclui(lost);
 
-        System.out.println("O tempo total para terminar as series e filmes é: " + calculadora.getTempoTotal());
+        System.out.println("O tempo total para maratonar todos do catálogo: " + calculadora.getTempoTotal());
+
+        Episodio episodio1BlackMirror = new Episodio();
+        episodio1BlackMirror.setNome("The national anthem");
+        episodio1BlackMirror.setNumero(1);
+        episodio1BlackMirror.setSerie(blackMirror);
+        episodio1BlackMirror.setTotalVisualizacoes(1000000);
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(episodio1BlackMirror);
+
     }
 
 }
