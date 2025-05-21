@@ -10,11 +10,8 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
 
-        Filme meuFilme = new Filme();
-
-        meuFilme.setNome("Interestelar");
-
-        meuFilme.setAnoDeLancamento(2015);
+        var meuFilme = new Filme("Interestelar", 2015);
+        //meuFilme.setNome("Interestelar"); Antes de criar construtores de classe.
         meuFilme.setDuracaoEmMinutos(150);
 
         meuFilme.exibeFichaTecnica();
@@ -28,20 +25,16 @@ public class Principal {
         //System.out.println("Total de avaliações "+ meuFilme.totalAvaliacoes);
         //System.out.println(String.format("Media das avaliações: %.2f ", meuFilme.pegaMedia()));
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.setTemporadas(15);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Minutos para terminar lost: " + lost.getDuracaoEmMinutos());
 
-        Serie blackMirror = new Serie();
-        blackMirror.setNome("BlackMirror");
+        Serie blackMirror = new Serie("BlackMirror", 2021);
         blackMirror.setTemporadas(7);
         blackMirror.setEpisodiosPorTemporada(12);
         blackMirror.setMinutosPorEpisodio(55);
-        blackMirror.setAnoDeLancamento(2021);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(meuFilme);
@@ -59,18 +52,14 @@ public class Principal {
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(episodio1BlackMirror);
 
-        var filmeGustavo = new Filme();
+        var filmeGustavo = new Filme("Os patetas", 2003);
         filmeGustavo.setDiretor("Gustavo Kummer");
-        filmeGustavo.setNome("Os patetas");
         filmeGustavo.avalia(10);
-        filmeGustavo.setAnoDeLancamento(2003);
         filmeGustavo.setDuracaoEmMinutos(120);
 
-        var velozesEFuriosos = new Filme();
+        var velozesEFuriosos = new Filme("Velozes e Furiosos", 2010);
         velozesEFuriosos.setDuracaoEmMinutos(150);
         velozesEFuriosos.setDiretor("Gustavo Kummer");
-        velozesEFuriosos.setAnoDeLancamento(2010);
-        velozesEFuriosos.setNome("Velozes e Furiosos");
         velozesEFuriosos.avalia(9);
 
         ArrayList<Filme> filmes = new ArrayList<>(); //Criando array list apenas com Filmes
@@ -84,6 +73,16 @@ public class Principal {
         for (Filme filme : filmes) {
             filme.exibeFichaTecnica();
         } // Exibe a ficha tecnica de cada um dos filmes do ArrayList
+
+        System.out.println("toString dos filmes: " + filmes.toString());
+        // Teste da sobrescrita do método toString (apresentando todos filmes e anos)
+        // da lista filmes do array.
+
+        ArrayList<Serie> series = new ArrayList<>();
+        series.add(blackMirror);
+        series.add(lost);
+        System.out.println("toString das series: " + series.toString());
+
     }
 
 }
