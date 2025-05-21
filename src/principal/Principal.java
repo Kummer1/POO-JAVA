@@ -1,9 +1,10 @@
+package principal;
+
 import calculos.CalculadoraDeTempo;
 import calculos.FiltroRecomendacao;
 import modelo.Episodio;
 import modelo.Filme;
 import modelo.Serie;
-import calculos.CalculadoraDeTempo;
 
 import java.util.ArrayList;
 
