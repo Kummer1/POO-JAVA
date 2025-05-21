@@ -16,5 +16,11 @@ public class Filme extends Titulo implements Classificavel {
     @Override
     public int getClassificacao() {
         return (int) pegaMedia() / 2;
+    } //usa a interface classificavel para classificar os filme de 0  a 5 estrelas.
+
+
+    @Override
+    public String toString() {
+        return "toString do Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
     }
 }

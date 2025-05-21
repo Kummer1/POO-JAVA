@@ -11,7 +11,7 @@ public class CalculadoraDeTempo {
     }
 
 //    public void inclui(Filme f){
-//        tempoTotal += f.getDuracaoEmMinutos();
+//        tempoTotal += f.getDuracaoEmMinutos(); // modelo antigo usado para o método inclui
 //    }
 //
 //    public void inclui(Serie s){
@@ -20,5 +20,5 @@ public class CalculadoraDeTempo {
 
     public void inclui(Titulo titulo){
         this.tempoTotal += titulo.getDuracaoEmMinutos();
-    }
+    } //Inclui recebe um Titulo (pode receber Filme e Series)
 }

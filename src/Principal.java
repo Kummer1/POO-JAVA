@@ -5,6 +5,8 @@ import modelo.Filme;
 import modelo.Serie;
 import calculos.CalculadoraDeTempo;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -57,6 +59,31 @@ public class Principal {
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(episodio1BlackMirror);
 
+        var filmeGustavo = new Filme();
+        filmeGustavo.setDiretor("Gustavo Kummer");
+        filmeGustavo.setNome("Os patetas");
+        filmeGustavo.avalia(10);
+        filmeGustavo.setAnoDeLancamento(2003);
+        filmeGustavo.setDuracaoEmMinutos(120);
+
+        var velozesEFuriosos = new Filme();
+        velozesEFuriosos.setDuracaoEmMinutos(150);
+        velozesEFuriosos.setDiretor("Gustavo Kummer");
+        velozesEFuriosos.setAnoDeLancamento(2010);
+        velozesEFuriosos.setNome("Velozes e Furiosos");
+        velozesEFuriosos.avalia(9);
+
+        ArrayList<Filme> filmes = new ArrayList<>(); //Criando array list apenas com Filmes
+        filmes.add(filmeGustavo);
+        filmes.add(meuFilme);
+        filmes.add(velozesEFuriosos);
+
+        System.out.println("O primeiro filme da lista é: " + filmes.get(0).getNome());
+        // Explorando o conteúdo de listas pegando o primeiro filme do Array de filmes.
+
+        for (Filme filme : filmes) {
+            filme.exibeFichaTecnica();
+        } // Exibe a ficha tecnica de cada um dos filmes do ArrayList
     }
 
 }

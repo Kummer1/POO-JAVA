@@ -48,4 +48,6 @@ public class Episodio implements Classificavel {
              return 2;
          }
     }
+    //usa a interface classificavel para aplicar a regra
+    // de avaliação
 }
