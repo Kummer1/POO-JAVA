@@ -3,8 +3,8 @@ import modelo.Episodio;
 import modelo.Filme;
 import modelo.Serie;
 import modelo.Titulo;
-
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -30,12 +30,24 @@ public class PrincipalComListas {
 
         for (Titulo item : lista) {
             System.out.println(item.getNome());
-            System.out.println(item);
-            Filme filme = (Filme) item;
-            System.out.println("Avaliação: " + filme.getClassificacao());
+            if (item instanceof Filme filme && filme.getClassificacao() > 2){
+                System.out.println("Classificação: " + filme.getClassificacao());
+            }
         }
 
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Gustavo Kummer");
+        buscaPorArtista.add("Nicole Gauziski");
 
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação");
+        System.out.println(buscaPorArtista);
+        System.out.println("Lista de titulos ordenados");
+        Collections.sort(lista);
+        System.out.println(lista);
+        System.out.println("Ordenando por ano");
+        System.out.println(lista);
 
     }
 }
