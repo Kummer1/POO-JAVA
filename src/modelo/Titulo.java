@@ -1,6 +1,6 @@
 package modelo;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String nome;
     private int anoDeLancamento;
     private double somaDasAvaliacoes;
@@ -65,5 +65,11 @@ public class Titulo {
         double mediaAvaliacoes = somaDasAvaliacoes/totalAvaliacoes;
         return mediaAvaliacoes;
     }
+
+    @Override
+    public int compareTo(Titulo outroTitulo){
+        return this.getNome().compareTo(outroTitulo.getNome());
+    } // Ordenar os Titulos por nome.
+
 
 }

@@ -1,14 +1,33 @@
 package principal;
-import modelo.Episodio;
 import modelo.Filme;
 import modelo.Serie;
 import modelo.Titulo;
-
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
 
+        ArrayList<Titulo> lista = getLista();
+
+        for (Titulo i : lista) {
+            System.out.println(i.getNome());
+        }
+
+        ArrayList<String> buscaPorAtores = new ArrayList<>();
+        buscaPorAtores.add("Adam Sandler");
+        buscaPorAtores.add("Gustavo Kummer");
+        buscaPorAtores.add("Nicole Gauziski");
+        buscaPorAtores.add("Ana Maria");
+
+        Collections.sort(buscaPorAtores); //Ordena as Strings por ordem alfabética
+        Collections.sort(lista);
+        System.out.println(lista);
+        System.out.println(buscaPorAtores);
+
+        }
+
+    private static ArrayList<Titulo> getLista() {
         var meuFilme = new Filme("Interestelar", 2015);
         Serie lost = new Serie("Lost", 2000);
         Serie blackMirror = new Serie("BlackMirror", 2021);
@@ -27,15 +46,7 @@ public class PrincipalComListas {
         lista.add(velozesEFuriosos);
         lista.add(blackMirror);
         lista.add(lost);
-
-        for (Titulo item : lista) {
-            System.out.println(item.getNome());
-            System.out.println(item);
-            Filme filme = (Filme) item;
-            System.out.println("Avaliação: " + filme.getClassificacao());
-        }
-
-
-
+        return lista;
     }
 }
+
