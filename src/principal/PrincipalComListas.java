@@ -1,10 +1,9 @@
 package principal;
-import modelo.Episodio;
 import modelo.Filme;
 import modelo.Serie;
 import modelo.Titulo;
-import java.util.ArrayList;
-import java.util.Collections;
+
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -21,21 +20,21 @@ public class PrincipalComListas {
         lost.avalia(7.4);
         velozesEFuriosos.avalia(6.89);
 
-        ArrayList<Titulo> lista = new ArrayList<>(); //Criando array list apenas com Filmes
+        List<Titulo> lista = new LinkedList<>(); //Criando array list apenas com Filmes
         lista.add(filmeGustavo);
         lista.add(meuFilme);
         lista.add(velozesEFuriosos);
         lista.add(blackMirror);
         lista.add(lost);
 
-        for (Titulo item : lista) {
-            System.out.println(item.getNome());
-            if (item instanceof Filme filme && filme.getClassificacao() > 2){
+        for (Titulo i : lista) {
+            System.out.println(i.getNome());
+            if (i instanceof Filme filme && filme.getClassificacao() > 2){
                 System.out.println("Classificação: " + filme.getClassificacao());
             }
         }
 
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new LinkedList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("Gustavo Kummer");
         buscaPorArtista.add("Nicole Gauziski");
@@ -49,5 +48,6 @@ public class PrincipalComListas {
         System.out.println("Ordenando por ano");
         System.out.println(lista);
 
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
     }
 }
