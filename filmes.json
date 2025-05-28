@@ -1,0 +1,42 @@
+[
+  {
+    "Nome": "Matrix",
+    "AnoDeLancamento": 1993,
+    "SomaDasAvaliacoes": 0.0,
+    "DuracaoEmMinutos": 60,
+    "TotalAvaliacoes": 0,
+    "IncluidoNoPlano": false
+  },
+  {
+    "Nome": "The Fast and the Furious",
+    "AnoDeLancamento": 2001,
+    "SomaDasAvaliacoes": 0.0,
+    "DuracaoEmMinutos": 106,
+    "TotalAvaliacoes": 0,
+    "IncluidoNoPlano": false
+  },
+  {
+    "Nome": "Clear and Present Danger",
+    "AnoDeLancamento": 1994,
+    "SomaDasAvaliacoes": 0.0,
+    "DuracaoEmMinutos": 141,
+    "TotalAvaliacoes": 0,
+    "IncluidoNoPlano": false
+  },
+  {
+    "Nome": "Come On",
+    "AnoDeLancamento": 2000,
+    "SomaDasAvaliacoes": 0.0,
+    "DuracaoEmMinutos": 93,
+    "TotalAvaliacoes": 0,
+    "IncluidoNoPlano": false
+  },
+  {
+    "Nome": "Oppenheimer",
+    "AnoDeLancamento": 2023,
+    "SomaDasAvaliacoes": 0.0,
+    "DuracaoEmMinutos": 180,
+    "TotalAvaliacoes": 0,
+    "IncluidoNoPlano": false
+  }
+]

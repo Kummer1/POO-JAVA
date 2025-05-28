@@ -21,8 +21,8 @@ public class Titulo implements Comparable<Titulo> {
             throw new ErroDeConversacaoException("Ano possui mais que 4 caracteres, " +
                     "formato inválido");
         }
-        this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
-        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,3));
+        this.anoDeLancamento = Integer.parseInt(meuTituloOmdb.year());
+        this.duracaoEmMinutos = Integer.parseInt(meuTituloOmdb.runtime().split(" ")[0]);
     }
 
     public void setNome(String nome) {
